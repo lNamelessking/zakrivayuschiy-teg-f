@@ -14,13 +14,13 @@
   <link rel="icon" href="./images/favicon/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="./images/favicon/favicon.png">
   <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
-  <meta name="color-scheme" content="dark light" />
+  <meta name="color-scheme" content="light dark" />
   <script src="./scripts/set-theme.js"></script>
 </head>
 
 <body class="page">
   <header class="header">
-    <a href="#" class="header__hero-logo">&lt;/html&gt;</a>
+    <a class="header__hero-logo">&lt;/html&gt;</a>
     <h1 class="header__hero-title">Закрывающий тег</h1>
     <nav class="theme-menu header__theme-menu">
       <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -391,9 +391,11 @@
         </svg>
         <p class="dialog__text-content">Вставьте дискету, чтобы продолжить</p>
       </div>
-      <button onclick="window['dialog-id'].close();" type="button" class="button dialog-close-button">
+      <form method="dialog">
+      <button type="submit" class="button dialog-close-button">
         <span class="button__text">Ok</span>
       </button>
+      </form>
     </dialog>
   </footer>
   <script src="./scripts/like.js"></script>
