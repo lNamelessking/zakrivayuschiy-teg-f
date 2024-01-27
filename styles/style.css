@@ -121,6 +121,11 @@
   scale: 1;
 }
 
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+
 .main {
   display: grid;
   gap: 50px;
