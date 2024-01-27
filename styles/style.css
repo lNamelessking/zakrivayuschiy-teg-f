@@ -47,7 +47,7 @@
 }
 
 .header__hero-logo {
-  font-size: clamp(2.438rem, 2.043rem + 1.683vw, 4.063rem);
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);;
   text-decoration: none;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .header__hero-title {
-  font-size: clamp(0.875rem, 0.738rem + 0.583vw, 1.438rem);
+  font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);;
   margin-block-start: 19px;
   margin-block-end: 22px;
 }
@@ -175,16 +175,19 @@
 }
 
 .main__card-content {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   font-size: 18px;
-  gap: 27px 25px;
+  gap: 27px;
   padding: 25px;
+  line-height: 21px;
 }
 
 .card__button-container {
   display: flex;
-  gap: 7px;
+  gap: 6px;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .button {
@@ -224,6 +227,7 @@
 
 .card__like-button {
   min-inline-size: 130px;
+  min-block-size: 38px;
 }
 
 .button__text {
@@ -233,18 +237,22 @@
 }
 
 .card__icon-button {
-  padding-top: 2px;
+  max-block-size: 36px;
+  padding: 0;
+  padding-top: 1px;
+  margin: 0;
   background: none;
-  border: solid 2px transparent;
+  border: none;
+  outline: solid 2px transparent;
 }
 
 .card__icon-button:focus {
-  outline: none;
+  outline: transparent;
 }
 
 .card__icon-button:focus-visible {
   transition: 0.3s ease;
-  border: solid 2px var(--accent-color);
+  outline: solid 2px var(--accent-color);
 }
 
 .like-icon {
@@ -259,7 +267,7 @@
 
 .footer-button {
   display: flex;
-  gap: 8px;
+  gap: 9px;
   justify-content: center;
   align-items: center;
   padding-inline: 20px;
@@ -275,7 +283,7 @@
 
 .dialog[open] {
   background-color: var(--bg-color, #FFF);
-  border: solid 4px var(--accent-color, #000);
+  border: solid 2px var(--accent-color, #000);
   padding: 30px;
   max-inline-size: 357px;
 }
@@ -291,8 +299,8 @@
 
 .floppy-dialog {
   fill: var(--accent-color);
-  max-inline-size: 100px;
-  max-block-size: 100px;
+  max-inline-size: 80px;
+  max-block-size: 80px;
 }
 
 .dialog__text-content {
@@ -319,5 +327,24 @@
 
   .header {
     padding-block-start: 120px;
+  }
+
+  .dialog[open] {
+    max-inline-size: 341px;
+    padding: 30px 40px;
+  }
+
+  .floppy {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+
+  .floppy-dialog {
+    inline-size: 90px;
+    block-size: 90px;
+  }
+
+  .footer-button {
+    padding-block: 14px;
   }
 }
