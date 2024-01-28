@@ -17,6 +17,7 @@
   --font-weight-bold: 700;
   --font-weight-regular: 400;
   --floppy-color: #FFF;
+  --heart-color: #000000;
 }
 
 :root.theme-dark {

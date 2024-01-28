@@ -132,7 +132,3 @@
 .filter-triple {
   filter:saturate(50%) opacity(20%) blur(30px);
 }
-
-@media (width <= 375px) {
-  
-}
